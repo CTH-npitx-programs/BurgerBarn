@@ -15,6 +15,7 @@ namespace BurgerBarn
         public frmBurgerBarn()
         {
             InitializeComponent();
+            // build: nada
         }
 
         private void frmBurgerBarn_Load(object sender, EventArgs e)
