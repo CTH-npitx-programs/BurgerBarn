@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}|BurgerBarn.csproj|h:\\students_folder\\charlie hatch\\semesters\\multi-semester\\app dev\\projects\\app dev 1\\burger barn\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}|BurgerBarn.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}|BurgerBarn.csproj|H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}|BurgerBarn.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}|BurgerBarn.csproj|h:\\students_folder\\charlie hatch\\semesters\\multi-semester\\app dev\\projects\\app dev 1\\burger barn\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}|BurgerBarn.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,12 +26,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\Form1.cs [Design]*",
-              "RelativeToolTip": "Form1.cs [Design]*",
+              "ToolTip": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T16:18:57.823Z",
               "IsPinned": true,
@@ -39,13 +39,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ToolTip": "H:\\Students_Folder\\Charlie Hatch\\Semesters\\Multi-Semester\\App Dev\\Projects\\App Dev 1\\Burger Barn\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T16:23:21.466Z",
               "IsPinned": true,
