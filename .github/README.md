@@ -30,33 +30,33 @@ At start, display a one-time welcome message that will not reappear once the scr
 1. Clicking Exit exits the program
 
 ## Cost of Items
- Display a menu of food options using Radio Buttons and Labels
+~~Display a menu of food options using Radio Buttons and Labels~~
 ### Burgers
-1. Plain burger: $4.99
-1. Cheeseburger: $5.99
-1. Veggie burger: $6.49
-1. Bacon Burger: $7.99
+1. ~~Plain burger: $4.99~~
+1. ~~Cheeseburger: $5.99~~
+1. ~~Veggie burger: $6.49~~
+1. ~~Bacon Burger: $7.99~~
 ### Sides
-1. Fries: $0.50
-1. Tater tots: $0.75
-1. Onion rings: $0.99
-1. Chips: $0.99
+1. ~~Fries: $0.50~~
+1. ~~Tater tots: $0.75~~
+1. ~~Onion rings: $0.99~~
+1. ~~Chips: $0.99~~
 ### Drinks
-1. Cola: $1.29
-1. Tea: $1.19
-1. Fruit Punch: $1.09
-1. Water: $0.99
+1. ~~Cola: $1.29~~
+1. ~~Tea: $1.19~~
+1. ~~Fruit Punch: $1.09~~
+1. ~~Water: $0.99~~
 ### Combos
-1. #1 Combo: $5.99
-	1. Plain Burger
-	1. Fries
-	1. Cola
-1. #2 Combo: $6.49
-	1. Cheese Burger
-	1. Tea
-	1. Onion Rings
-1. #3 Combo: $8.99
-	1. Bacon Burger
-	1. Chips
-	1. Cola
+1. ~~#1 Combo: $5.99~~
+	1. ~~Plain Burger~~
+	1. ~~Fries~~
+	1. ~~Cola~~
+1. ~~#2 Combo: $6.49~~
+	1. ~~Cheese Burger~~
+	1. ~~Tea~~
+	1. ~~Onion Rings~~
+1. ~~#3 Combo: $8.99~~
+	1. ~~Bacon Burger~~
+	1. ~~Chips~~
+	1. ~~Cola~~
 integrated by useing tags on the radio buttons. few alternative ideas might be used, such as utilizing the contents of the name itself. Note: combos have not been integrated
