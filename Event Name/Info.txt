@@ -1,4 +1,0 @@
-There are 2 ways to rename an event I can think of
-
-One of them has 1 less steps, but it is unknown if any differences exist besides that.
-So, to test that, we have no option but to do both

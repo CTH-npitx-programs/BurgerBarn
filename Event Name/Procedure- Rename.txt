@@ -1,4 +1,0 @@
-The second is to go and directly rename the event.
-This means you never have to even go to the form designer, nor unbind it from the current event.
-
-I could, however, see a refference possibly getting damaged in the process

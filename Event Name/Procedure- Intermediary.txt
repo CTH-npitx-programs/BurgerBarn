@@ -1,5 +1,0 @@
-The first is to go into the form, and find the event they are bound to.
-Then, you type a new event. That will create a second event, and all of them are bound to it.
-Meanwhile, the original one is no longer bound to anything, but by copying the name of the event, it will now be bound. Then delete the intermediary.
-
-By doing this, you can always see there is a refference, but a forseeable downside is that it will end up somehow containing both events

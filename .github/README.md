@@ -1,12 +1,12 @@
-# this specific branch
-this contains the creation of a function that will auto-preform the calculation of the prices
-
 # Burger Barn
 A simple, highly gernalized program for "purchaseing" burgers
 does not need a readme
 and yet, here we are... so why?
 Hmm, what if we make a ***List of all the Reqrirments!***
-
+## Expirments
+of course, in the process, some tests are bound to be made, and expirments be documented
+the expirments whose documentation survives the mess of code we have here, they will go here too!
+1. [Renameing Events](https://github.com/CTH-npitx-programs/BurgerBarn/blob/final-conclusions/.github/FinalResults.md)
 # Reqrirments
 just the requriments of the program. still needs work, as some of the reqriments seem in-compatabible.
 ## Useage & simple notes
