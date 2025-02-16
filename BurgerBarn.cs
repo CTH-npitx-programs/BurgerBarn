@@ -38,16 +38,9 @@ namespace BurgerBarn
             lbl_total.Text = "Total: " + total.ToString("c2"); //same as above, only for the sum of those 2
         }
         #endregion
+        // this area can be consolidated more
         #region ordering
-        private void rdb_burgers(object sender, EventArgs e) //this will call the function to update the price whenever the selected burger changes
-        {
-            updatePrice(sender);
-        }
-        private void rdb_sides(object sender, EventArgs e) //this will call the function to update the price whenever the selected side changes
-        {
-            updatePrice(sender);
-        }
-        private void rdb_drinks(object sender, EventArgs e) //this will call the function to update the price whenever the selected drink changes
+        private void rdb_Selection(object sender, EventArgs e) //this will call the function to update the price whenever the selected item changes
         {
             updatePrice(sender);
         }
