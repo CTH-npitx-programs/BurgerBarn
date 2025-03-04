@@ -403,13 +403,16 @@
             // 
             this.cmb_coupon.FormattingEnabled = true;
             this.cmb_coupon.Items.AddRange(new object[] {
+            "0%",
             "10%",
             "25%",
             "40%",
             "50%",
             "100%",
             "110%",
-            "200%"});
+            "200%",
+            "-10%",
+            "-100%"});
             this.cmb_coupon.Location = new System.Drawing.Point(573, 562);
             this.cmb_coupon.Name = "cmb_coupon";
             this.cmb_coupon.Size = new System.Drawing.Size(233, 37);
