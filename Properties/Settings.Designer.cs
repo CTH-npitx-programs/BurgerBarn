@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BurgerBarn.Properties
+namespace BurgerBarnSummer.Properties
 {
 
 

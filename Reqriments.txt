@@ -1,7 +1,6 @@
-Change the "Apply Coupon" button to a "Combo Box."
 The combo box should list several different percentages (example: 20%, 40%, 60%).
 Selecting an option applies that discount to the Total.
-Remove the Sides category from the menu.
+
 Modify the List Box to sort items (from highest to lowest).
 Your code must be thoroughly commented, to the point where another Crew member can understand what your program does without looking at the code.
 If there are any errors in the program, whether from your code or your partner's, fix them. Add comments stating what the error was, and how you fixed it. 

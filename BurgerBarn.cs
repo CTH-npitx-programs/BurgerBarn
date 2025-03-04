@@ -1,86 +1,121 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace BurgerBarn
+namespace BurgerBarnSummer
 {
+
     public partial class BurgerBarn : Form
     {
         float subtotal = 0;
-        const float tax_rate = 0.0825f;
-        float discount = 1; //no discount, aka 100% (a.k.a. 1 times) the normal price
-        const float discValue = 20f; //the discount, as a percent. The code subtracts it from 100, then divides by 100. So, putting in 20 is the same as 20% off, which becomes .8 (what that means
-        
-
+        float tax_rate = 0.0825f;
+        float discount = 1;
+        const string noCouponText = "No Coupon"; //the text for no coupon, allowing you to change the "no coupon" phrase!
         public BurgerBarn()
         {
             InitializeComponent();
         }
 
-        private void rdb_selectItem(object sender, EventArgs e)
-        {
-            rdbSelect(sender); //directly send the sender to the function
-        }
-
-        //function for ordering
-        private void rdbSelect(object bttn)
-        {
-            RadioButton rdb = bttn as RadioButton; //takes the inputed object (sender), and converts it to a radio button
-            if (rdb.Checked) //rdb selected
-            {
-                if(rdb.Text != "None") // If none is ever selected it doesn't add to receipt
-                    lstOrder.Items.Add(rdb.Text); //Adds items to receipt
-                subtotal += float.Parse(rdb.Tag.ToString()); //adds price to receipt
-            }
-            else
-            {
-                lstOrder.Items.Remove(rdb.Text); //removes Items from order
-                subtotal -= float.Parse(rdb.Tag.ToString()); // removes price from receipt
-            }
-            //calculate totalss
-            float tax = subtotal * tax_rate;
-            //applies the discount. By doing it after the tax, tax is based on the original subtotal. By doing it before total, the total factors in the discount, meaning it's the discounted subtotal + the non-discounted tax. if you want the discount to include tax, just move this one line up
-            float total = (subtotal * discount) + tax; //the subtotal is multiplied by the discount, which allows it to discount the subtotal. Meanwhile, the tax remains the same
-
-            //display totals
-            lblSubtoal.Text = (subtotal * discount).ToString("c2"); //discount is applied to the subtotal here
-            lblTax.Text = tax.ToString("c2");
-            lblTotal.Text = total.ToString("c2");
-        }
-
-        #region UI
-        private void btnExit_Click(object sender, EventArgs e) //exit program
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void btnPurchase_Click(object sender, EventArgs e) //purchase
+
+#region select
+        private void btn_selectOrder(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for your purchase!");
-            rdbNoBurger.Checked = true;
-            rdbNoDrink.Checked = true;
-            rdbNoSide.Checked = true;
-            rdbNoSand.Checked = true;
-            bttnCoupon.Enabled = true; //re-enable the coupon once it's applied
-            discount = 1; //resets the discount to being none upon purchase 
-            subtotal = 0;
+            RadioButton rdb = sender as RadioButton; //burgers selected
+            rdbSelect(rdb); //call method
         }
-        
-        private void bttnCoupon_Click(object sender, EventArgs e)
+#endregion
+        private void btnPurchase_Click(object sender, EventArgs e)
         {
-            bttnCoupon.Enabled = false; //disable the coupon button once applied
-            discount = (100 - discValue) / 100; //sets the discount to be be the reciprical of the discount value as a percent, so that the value to pay can be calculated by multiplication. So, a 20% discount (an input of 20) is the same as 80% of the original price. The 100-"x" turns 20 to 80. Then, divide by 100, and you get 0.8, or 80 percent.
+            if(lstOrder.Items.Count == 0)
+            {
+                MessageBox.Show("You must have an item in your order to purchase."); //Show message
+            }
+            else
+            {
+                string message = "";
 
-            //to activate the coupon upon clicking the button, I went with the simplest method, which is to just copy the code that is used for the "rdbSelect" part
-                //I recommend either methodizing this part, or modifying the method to have a "refresh" feature which just does a recalculation
-                //calculate totals
-                float tax = subtotal * tax_rate;
-                //applies the discount. By doing it after the tax, tax is based on the original subtotal. By doing it before total, the total factors in the discount, meaning it's the discounted subtotal + the non-discounted tax. if you want the discount to include tax, just move this one line up
-                float total = (subtotal * discount) + tax; //the subtotal is multiplied by the discount, which allows it to discount the subtotal. Meanwhile, the tax remains the same
+                foreach(var item in lstOrder.Items)
+                {
+                    message += item.ToString() + "\n";
+                }
 
-            //display totals
-            lblSubtoal.Text = (subtotal * discount).ToString("c2"); //discount is applied to the subtotal here
+                message += "---------------------------\n";
+
+                message += string.Format("Subtotal: \t{0:C}\n", lblSubtotal.Text); //displays subtotal
+                message += string.Format("Tax:      \t\t{0:C}\n", lblTax.Text); //displays Tax
+                message += string.Format("Total:    \t\t{0:C}\n", lblTotal.Text); //displays total
+                
+                MessageBox.Show(message);
+
+                rdbNoBurger.Checked = true; //selects no burger
+                rdbNoDrink.Checked = true; //selects no drink
+                rdbNoSandwich.Checked = true; //selects no sandwich
+
+                cmb_coupon.SelectedIndex = 0; //reset selected coupon
+            }
+        }
+        private void CalcTotal()
+        {
+   
+            //calculate subtotal
+            float tax = (subtotal * discount) * tax_rate;
+            float total = (subtotal * discount) + tax;
+
+            //display subtotal 
+            lblSubtotal.Text = (subtotal * discount).ToString("c2");
             lblTax.Text = tax.ToString("c2");
             lblTotal.Text = total.ToString("c2");
-        } //apply coupons
-        #endregion UI
+
+            if (discount < 0) {
+                lblSubtotal.Text = "-" + lblSubtotal.Text;
+                lblTax.Text = "-" + lblTax.Text;
+                lblTotal.Text = "-" + lblTotal.Text;
+            } //checks that the discount is more than zero. If it isn't, then it is a negative discount, and thus the calculated value must be multiplied by -1
+        }
+
+
+        private void rdbSelect(RadioButton rdb)
+        {
+            if (rdb.Checked)  //if selected 
+            {
+                if (rdb.Text != "None")
+                    lstOrder.Items.Add(rdb.Text);      //add plain burger to receipt
+
+                subtotal += float.Parse(rdb.Tag.ToString());   //update subtotal
+            }
+            else //if plain burger is deselected
+            {
+                lstOrder.Items.Remove(rdb.Text); //remove plain burger from receipt
+
+                subtotal -= float.Parse(rdb.Tag.ToString()); //update subtotal 
+            }
+           CalcTotal(); //Call method
+        }
+
+        private void cmb_coupon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmb_coupon.Text == noCouponText)
+            {
+                discount = 1; //no discount is 1
+            } else
+            {
+                string discString = cmb_coupon.Text;
+                discString = discString.Substring(0, discString.Length - 1); //remove percent sign
+                float discVal = float.Parse(discString); //convert that text to number
+                discVal = discVal / 100; //convert the number to percent by divideing by 100
+                discVal = 1 - discVal; //subtract one to make it into a "percent off"
+                discount = discVal; //set discount
+            }
+            CalcTotal(); //run calculation
+        }
+
+        private void BurgerBarn_Load(object sender, EventArgs e)
+        {
+            cmb_coupon.Items.Insert(0, noCouponText); //add the text for no coupon (as that's not hard-coded)
+            cmb_coupon.SelectedIndex = 0; //reset coupon (as a new "0" is added, it needs to be set to 0)
+        }
     }
 }
